@@ -1,0 +1,47 @@
+\documentclass[10pt]{beamer}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\begin{frame}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(3.,-6.) rectangle (20.,4.);
+\onslide<3->{
+  \draw [line width=2.pt] (4.64,-3.5)-- (12.8,-3.46);
+}
+\onslide<4->{
+  \draw [shift={(4.64,-3.5)},line width=2.pt]  plot[domain=0.7716249297168476:1.3258176636680326,variable=\t]({1.*5.134082196459266*cos(\t r)+0.*5.134082196459266*sin(\t r)},{0.*5.134082196459266*cos(\t r)+1.*5.134082196459266*sin(\t r)});
+}
+\onslide<5->{
+  \draw [shift={(12.8,-3.46)},line width=2.pt]  plot[domain=2.3042182246234337:2.6817862548899973,variable=\t]({1.*6.985527897016804*cos(\t r)+0.*6.985527897016804*sin(\t r)},{0.*6.985527897016804*cos(\t r)+1.*6.985527897016804*sin(\t r)});
+}
+\onslide<7->{
+  \draw [line width=2.pt] (4.64,-3.5)-- (7.323716618017731,0.876809924382765);
+}
+\onslide<8->{
+  \draw [line width=2.pt] (7.323716618017731,0.876809924382765)-- (12.8,-3.46);
+}
+\begin{scriptsize}
+\onslide<1->{
+  \draw [fill=ffffff] (4.64,-3.5) circle (1.5pt);
+}
+\onslide<1->{
+  \draw[color=000000, left] (4.78,-3.21) node {$A$};
+}
+\onslide<2->{
+  \draw [fill=ffffff] (12.8,-3.46) circle (1.5pt);
+}
+\onslide<2->{
+  \draw[color=000000] (12.94,-3.17) node {$B$};
+}
+\onslide<6->{
+  \draw [fill=ffffff] (7.323716618017731,0.876809924382765) circle (1.5pt);
+}
+\onslide<6->{
+  \draw[color=000000, left] (7.46,1.17) node {$C$};
+}
+\end{scriptsize}
+\end{tikzpicture}
+\end{frame}
+\end{document}

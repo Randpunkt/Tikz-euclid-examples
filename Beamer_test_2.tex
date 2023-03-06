@@ -1,0 +1,99 @@
+\documentclass[10pt]{beamer}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\begin{frame}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\clip(-10.,-10.) rectangle (20.,10.);
+\onslide<6->{
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (5.86,2.04) -- (3.16,2.48) -- (4.128948822334846,-0.07826859021798538) -- cycle;
+}
+\onslide<3->{
+  \draw [line width=2.pt] (7.08,5.08)-- (5.86,2.04);
+}
+\onslide<5->{
+  \draw [line width=2.pt] (3.16,2.48)-- (5.86,2.04);
+}
+\onslide<6->{
+  \draw [line width=2.pt,color=zzttqq] (5.86,2.04)-- (3.16,2.48);
+}
+\onslide<6->{
+  \draw [line width=2.pt,color=zzttqq] (3.16,2.48)-- (4.128948822334846,-0.07826859021798538);
+}
+\onslide<6->{
+  \draw [line width=2.pt,color=zzttqq] (4.128948822334846,-0.07826859021798538)-- (5.86,2.04);
+}
+\onslide<7->{
+  \draw [line width=2.pt] (5.86,2.04) circle (3.27566787083184cm);
+}
+\onslide<8->{
+  \draw [line width=2.pt,domain=4.128948822334846:20.0] plot(\x,{(-8.881709536240479--2.118268590217985*\x)/1.7310511776651545});
+}
+\onslide<10->{
+  \draw [line width=2.pt] (4.128948822334846,-0.07826859021798538) circle (6.0112848030794845cm);
+}
+\onslide<11->{
+  \draw [line width=2.pt,domain=-10.0:4.128948822334846] plot(\x,{(-10.487121824479253--2.5582685902179856*\x)/-0.9689488223348457});
+}
+\begin{scriptsize}
+\onslide<1->{
+  \draw [fill=ffffff] (7.08,5.08) circle (1.5pt);
+}
+\onslide<1->{
+  \draw[color=ffffff] (7.3832497241561,5.732211758565865) node {$A$};
+}
+\onslide<2->{
+  \draw [fill=ffffff] (5.86,2.04) circle (1.5pt);
+}
+\onslide<2->{
+  \draw[color=ffffff] (6.187022602868295,2.6956352199122073) node {$B$};
+}
+\onslide<3->{
+  \draw[color=black] (5.910970190263416,4.259932224673182) node {$f$};
+}
+\onslide<4->{
+  \draw [fill=ffffff] (3.16,2.48) circle (1.5pt);
+}
+\onslide<4->{
+  \draw[color=ffffff] (3.472507212253659,3.1557225742536708) node {$C$};
+}
+\onslide<5->{
+  \draw[color=black] (4.484699391804878,1.959495452965866) node {$g$};
+}
+\onslide<6->{
+  \draw [fill=ffffff] (4.128948822334846,-0.07826859021798538) circle (1.5pt);
+}
+\onslide<6->{
+  \draw[color=ffffff] (4.438690656370732,0.5792333899414759) node {$D$};
+}
+\onslide<7->{
+  \draw[color=black] (4.346673185502439,4.305940960107328) node {$c$};
+}
+\onslide<8->{
+  \draw[color=black] (5.588909042224391,0.8092770671122076) node {$k$};
+}
+\onslide<9->{
+  \draw [fill=ffffff] (7.9327860902602625,4.576445904020738) circle (1.5pt);
+}
+\onslide<9->{
+  \draw[color=ffffff] (8.25741569740488,5.226115668790255) node {$E$};
+}
+\onslide<10->{
+  \draw[color=black] (1.2180791759804868,4.53598463727806) node {$d$};
+}
+\onslide<11->{
+  \draw[color=black] (3.518515947687805,0.9473032734146465) node {$l$};
+}
+\onslide<12->{
+  \draw [fill=ffffff] (1.999766456923186,5.543308362786784) circle (1.5pt);
+}
+\onslide<12->{
+  \draw[color=ffffff] (2.3222888263999995,6.192299112907328) node {$F$};
+}
+\end{scriptsize}
+\end{tikzpicture}
+\end{frame}
+\end{document}

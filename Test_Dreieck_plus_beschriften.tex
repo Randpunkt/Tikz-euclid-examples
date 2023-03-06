@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\colorlet{input}{red!80!black}
+\colorlet{output}{red!70!black}
+\colorlet{triangle}{orange!40}
+
+\begin{tikzpicture}[scale=.75]
+    \tkzDefPoint(-1,1){A}
+    \tkzDefPoint(5,2){B}
+    \tkzDefEquilateral(A,B)
+    \tkzGetPoint{C}
+    \tkzDrawPolygon(A,B,C)
+    \tkzFindAngle(B,A,C) \tkzGetAngle{angleBAC}
+    \edef\angleBAC{\fpeval{round(\angleBAC)}}
+    \tkzDrawPoints(A,B,C)
+    \tkzLabelPoints(A,B)
+    \tkzLabelPoint[right](C){$C$}
+    \tkzLabelAngle(B,A,C){$\alpha$}
+    \tkzLabelAngle(C,B,A){$\beta$}
+    \tkzLabelAngle(A,C,B){$\gamma$}
+    \tkzMarkAngle[size=1.5](B,A,C)
+    \tkzMarkAngle[size=1.5](C,B,A)
+    \tkzMarkAngle[size=1.5](A,C,B)
+\end{tikzpicture}
+
+
+
+\end{document}

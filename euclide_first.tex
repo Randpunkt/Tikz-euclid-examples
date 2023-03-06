@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Tikz-euclid-examples}
+\author{Randpunkt}
+\date{\today}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\maketitle
+
+\section{Euclid’s Elements - Book I, Proposition I }
+To construct an equilateral triangle on a given finite straight line.
+
+\colorlet{input}{red!80!black}
+\colorlet{output}{red!70!black}
+\colorlet{triangle}{orange!40}
+
+\begin{tikzpicture}[scale=1.5,thick,help lines/.style={thin,dotted,draw=black!50}]
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(1.25+.5,0.25+.5){B}
+    \tkzInterCC(A,B)(B,A) \tkzGetPoints{C}{X}
+    \tkzFillPolygon[triangle,opacity=.5](A,B,X)
+    \tkzDrawSegment[input](A,B)
+    \tkzDrawSegments[red](A,C B,C)
+    \tkzDrawCircles(A,B B,A)
+    \tkzDrawPoints[fill=gray,opacity=.5](A,B,C)
+    \tkzLabelPoints(A,B)
+    \tkzLabelCircle[below=12pt](A,B)(180){$\mathcal{D}$}
+    \tkzLabelCircle[above=12pt](B,A)(180){$\mathcal{E}$}
+    \tkzLabelPoint[above,red](C){$C$}
+    
+\end{tikzpicture}
+
+
+
+
+
+\end{document}

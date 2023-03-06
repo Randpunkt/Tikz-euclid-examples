@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\colorlet{input}{red!80!black}
+\colorlet{output}{red!70!black}
+\colorlet{triangle}{orange!40}
+
+\begin{tikzpicture}[scale=2,thick,help lines/.style={thin,dotted,draw=black!50}]
+    \tkzDefPoints{0/0/A,0.75/-0.2/B,2/.2/C}
+    \tkzDefMidPoint(A,B) \tkzGetPoint{X}
+    \tkzDefTriangle[equilateral](B,A) \tkzGetPoint{D}
+    \tkzFillPolygon[triangle,opacity=.5](A,B,C)
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawCircle(B,C)
+    \tkzDrawLines[add=0 and 2](D,A D,B)
+    \tkzInterLC(B,D)(B,C) \tkzGetFirstPoint{G}
+    \tkzDrawCircle(D,G)
+    \tkzInterLC(D,A)(D,G)\tkzGetSecondPoint{L}
+    \tkzDrawSegment[output](A,L)
+    \tkzDrawSegment[output](B,C)
+    \tkzDrawPoints[fill=white](G,L)
+    \tkzDrawPoints[fill=white](A,B,C)
+    \tkzLabelPoints[left,red](A)
+    \tkzLabelPoints[below right,red](L)
+    \tkzLabelPoints[above left](D)
+    \tkzLabelPoints[above](G)
+    \tkzLabelPoints[above,red](C)
+    \tkzLabelPoints[right,red](B)
+    \tkzLabelCircle[below](D,G)(-90){$\mathcal{(K)}$}
+\end{tikzpicture}
+
+
+
+\end{document}
